@@ -47,7 +47,6 @@ function checkJWTScopes (expectedScopes, { checkAllScopes = true }) {
     }
 
     let scopes = req.auth.scope
-
     let allowed = checkAllScopes ?
       expectedScopes.every(scope => scopes.includes(scope)): 
       expectedScopes.some(scope => scopes.includes(scope));
